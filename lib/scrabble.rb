@@ -1,6 +1,6 @@
 class Scrabble
   def score(word)
-    0
+    point_values[word.capitalize]
   end
 
   def point_values
