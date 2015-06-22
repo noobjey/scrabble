@@ -1,6 +1,7 @@
 class Scrabble
   def score(word)
-    point_values[word.capitalize]
+    return 0 if word.nil?
+    word.chars.inject(0) { |s, char| s + point_values[char.capitalize] }
   end
 
   def point_values
